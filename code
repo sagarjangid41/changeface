@@ -1,0 +1,22 @@
+import numpy as np 
+import cv2
+# load 1st photo 
+photo=cv2.imread('piic-2.jpg')
+cv2.imshow('1st photo ',photo)
+cv2.waitKey()
+cv2.destroyAllWindows()
+# crop photo face
+cphoto =photo[0:140 , 300:420]
+# load 2nd photo 
+photo1=cv2.imread('pic-1.jpg')
+cv2.imshow('2nd photo',photo1)
+cv2.waitKey()
+cv2.destroyAllWindows()
+# crop 2nd photo 
+cphoto1 =photo1[80:220 , 180:300]
+# change face 
+photo1[80:220 , 180:300] =cphoto
+# show photo 
+cv2.imshow('hi',photo1)
+cv2.waitKey()
+cv2.destroyAllWindows()
