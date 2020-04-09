@@ -1,0 +1,7 @@
+import numpy as np 
+import cv2
+photo=cv2.imread('piic-2.jpg')
+photo[:283,:512,2] =0
+cv2.imshow('1st photo ',photo)
+cv2.waitKey()
+cv2.destroyAllWindows()
